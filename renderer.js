@@ -4,10 +4,10 @@ let createUser = document.getElementById("createUser");
 createUser.addEventListener('click',async()=>{
     
     let result =  await api.send("task",{
-        no:31,
-        name:"deepak",
-        college:"SCE",
-        city:"Ahmedabad",
+        no: 31,
+        name: "Deepak",
+        college: "SCE",
+        city: "Ahmedabad",
         action:"create"
     })
     console.log("Create User : ",result);
@@ -18,7 +18,7 @@ let getUser = document.getElementById("getUser");
 getUser.addEventListener('click',async ()=>{
 
     let result = await api.send("task",{
-        userId:"RwNAVu8DIoM6wNZo",
+        userId:"69170f9341bb3e0988117477",
         action:"get"
     });
     console.log("Get User  : ",result)
@@ -30,7 +30,7 @@ let updateUser = document.getElementById("updateUser");
 updateUser.addEventListener('click',async ()=>{
 
     let result = await api.send("task",{
-        userId:"RwNAVu8DIoM6wNZo",
+        userId:"69170f9341bb3e0988117477",
         newno:221133116006,
         newname:"Darji Dev",
         newcollege:"Sal College of Engineering",
@@ -47,7 +47,7 @@ let deleteUser = document.getElementById("deleteUser");
 deleteUser.addEventListener('click',async ()=>{
 
     let result = await api.send("task",{
-        userId:"ycaYabSxlUR0etQ2",
+        userId:"69170fde6094977fdfac4259",
         action:"delete"
     });
     console.log("Delete User  : ",result)

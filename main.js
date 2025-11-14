@@ -1,5 +1,5 @@
 import {app,BrowserWindow,ipcMain,screen,Tray,Menu} from "electron";
-import { createUser,getUser,updateUser,deleteUser,deleteAllUser } from "./Nedb.js";
+import { createUser,getUser,updateUser,deleteUser,deleteAllUser } from "./mongodb.js";
  
 
 import path from "node:path";
