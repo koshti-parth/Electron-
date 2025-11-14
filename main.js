@@ -87,8 +87,11 @@ app.whenReady().then(()=>{
 
 
     //Appllication run as background
+    const icon = app.isPackaged
+        ? path.join(process.resourcesPath, "resources", "1.jpg")
+        : path.join(__dirname__, "resources", "1.jpg");
 
-    let tray = new Tray("./1.jpg");
+    let tray = new Tray(icon);
     let menu = Menu.buildFromTemplate([
         {
             label:"open App",

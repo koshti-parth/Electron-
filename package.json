@@ -6,15 +6,35 @@
   "type": "module",
   "scripts": {
     "start": "nodemon --exec electron .",
-    "dev": "electron ."
+    "dev": "electron .",
+    "build": "electron-builder"
+  },
+  "build": {
+    "appId": "app-electron",
+    "asar": true,
+    "win": {
+      "target": "nsis"
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": true,
+      "allowToChangeInstallationDirectory": true,
+      "runAfterFinish": true
+    },
+    "extraResources": [
+      "resources/**"
+    ]
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "electron": "^39.1.2",
     "nedb-promises": "^6.2.3",
     "nodemon": "^3.1.11",
     "puppeteer-core": "^24.30.0"
+  },
+  "devDependencies": {
+    "electron": "^39.2.0",
+    "electron-builder": "^26.0.12"
   }
 }
