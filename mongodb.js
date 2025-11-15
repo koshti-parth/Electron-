@@ -61,7 +61,7 @@ export async function createUser(data){
 
 export async function getUser(userId){
     try {
-        let user = await userModel.find({_id:userId});
+        let user = await userModel.findOne({_id:userId});
         console.log(" User Fetched: ",user )
         return {
             status:true,
