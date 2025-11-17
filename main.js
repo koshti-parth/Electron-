@@ -117,3 +117,28 @@ app.whenReady().then(()=>{
     
 
 })
+
+
+/*
+
+const {BrowserWindow, app} = require("electron");
+const pie = require("puppeteer-in-electron")
+const puppeteer = require("puppeteer-core");
+
+const main = async () => {
+  await pie.initialize(app);
+  const browser = await pie.connect(app, puppeteer);
+ 
+    const window1 = new BrowserWindow({ width: 500, height: 500 });
+    await window1.loadURL("https://www.facebook.com/");
+
+    const page1 = await pie.getPage(browser, window1);
+    await page1.type("#email", "Anonymous_Parth");
+    await page1.screenshot({ path: "1.jpg" });
+
+};
+
+main();
+
+
+*/
